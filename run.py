@@ -16,8 +16,7 @@ with open('lifeExpect.csv', newline='') as f:
             print("4. GDP")
             print("5. Schooling\n")
 
-            raw_selection = input()
-            selection = int(raw_selection)
+            selection = input()
 
             if validate_input(selection):
                 print("Data is valid!")
@@ -30,13 +29,13 @@ with open('lifeExpect.csv', newline='') as f:
         Check that the user input is an integer within the specified range. If not display
         and error message and continue While loop in get_user_input.
         """
-        print(type(selection))
         try:
-            if selection > 5 or selection < 1:
+            input_int = int(selection)
+            if input_int > 5 or input_int < 1:
                 raise ValueError("Please enter a number between 1 and 5")
 
-        except:
-            print("Input must be a number between 1 and 5!")
+        except ValueError:
+            print("Input must be a number between 1 and 5!\n")
             return False
 
         return True
