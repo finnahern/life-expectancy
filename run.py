@@ -10,14 +10,12 @@ with open('lifeExpect.csv', newline='') as f:
         """
 
         while True:
-            print("Please select the data you wish to sort by entering a number between 1 and 5.")
-            print("1. Life Expectancy")
-            print("2. Adult Mortality")
-            print("3. Infant Mortality")
-            print("4. GDP")
-            print("5. Schooling\n")
+            print("Please select the data you wish to sort by entering a number between 1 and 13.")
+            for x in range(13):
+                print(f"{x + 1}. {data[0][x + 3]}")
 
             selection = input()
+            selection = int(selection)
 
             if validate_input(selection):
                 print("Data is valid!")
@@ -33,12 +31,11 @@ with open('lifeExpect.csv', newline='') as f:
         """
 
         try:
-            input_int = int(selection)
-            if input_int > 5 or input_int < 1:
-                raise ValueError("Please enter a number between 1 and 5")
+            if selection > 13 or selection < 1:
+                raise ValueError("Please enter a number between 1 and 13")
 
         except ValueError:
-            print("Input must be a number between 1 and 5!\n")
+            print("Input must be a number between 1 and 13!\n")
             return False
 
         return True
@@ -49,23 +46,28 @@ with open('lifeExpect.csv', newline='') as f:
         values. Sort these by life expectancy values and display the top five.
         """
         print(f"sort_data called, selection is: {selection}")
-        #Refactor to include all columns with a for loop
+
         data_category = ""
         data_col = 0
         if selection == 1:
             data_category = "life expectancy"
+            print(data_category)
             data_col = 3
         elif selection == 2:
             data_category = "adult mortality"
+            print(data_category)
             data_col = 4
         elif selection == 3:
             data_category = "infant mortality"
+            print(data_category)
             data_col = 5
         elif selection == 4:
             data_category = "GDP"
+            print(data_category)
             data_col = 12
         elif selection == 5:
             data_category = "average years of schooling"
+            print(data_category)
             data_col = 15
 
         print(f"data_col is: {data_col}")
