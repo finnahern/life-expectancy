@@ -47,41 +47,15 @@ with open('lifeExpect.csv', newline='') as f:
         """
         print(f"sort_data called, selection is: {selection}")
 
-        data_category = ""
-        data_col = 0
-        if selection == 1:
-            data_category = "life expectancy"
-            print(data_category)
-            data_col = 3
-        elif selection == 2:
-            data_category = "adult mortality"
-            print(data_category)
-            data_col = 4
-        elif selection == 3:
-            data_category = "infant mortality"
-            print(data_category)
-            data_col = 5
-        elif selection == 4:
-            data_category = "GDP"
-            print(data_category)
-            data_col = 12
-        elif selection == 5:
-            data_category = "average years of schooling"
-            print(data_category)
-            data_col = 15
-
-        print(f"data_col is: {data_col}")
-        print(f"data_category is: {data_category}")
-
         data_list = []
         for row in data[1:]:
-            line = [row[0], row[data_col]]
+            line = [row[0], row[selection + 2]]
             data_list.append(line)
 
         data_list.sort(key=lambda x: x[1], reverse=True)
         data_list = data_list[:5]
 
-        print("The top five countries for life expectancy in 2015 are:")
+        print(f"The top five countries for {data[0][selection + 2]} in 2015 are:")
         for x in range(5):
             print(f"{(x + 1)}. {data_list[x][0]}    {data_list[x][1]}")
 

@@ -1,0 +1,1 @@
+11/8/21 - Sort function sorting some categories correctly, but not others.
