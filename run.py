@@ -49,6 +49,7 @@ with open('lifeExpect.csv', newline='') as f:
 
         data_list = []
         for row in data[1:]:
+            row[selection + 2] = float(row[selection + 2])
             line = [row[0], row[selection + 2]]
             data_list.append(line)
 

@@ -1,1 +1,2 @@
 11/8/21 - Sort function sorting some categories correctly, but not others.
+FIX: list elements in the data variable were all strings. The problem was solved once I converted them into floats before sorting
