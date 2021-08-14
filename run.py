@@ -18,7 +18,7 @@ class data_category:
 
 
 # opens the 2 .csv files and creates lists of their contents
-with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", newline=",") as f2:
+with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", newline="") as f2:
     reader1 = csv.reader(f1)
     data = list(reader1)
 
@@ -62,12 +62,15 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
 
         return True
 
-    def define_object(selelction):
+    def define_object(selection):
         """
         Creates an instance of the data category object and populates it from lifeExpectCategories.csv
         """
 
-        print(data_categories)
+        selected_category = data_category(data[0][selection + 2], data_categories[selection])
+        print("\nCATEGORY OBJECT DEFINED")
+        print(selected_category.get_name())
+        print(selected_category.get_info())
 
     def sort_data(selection):
         """
@@ -108,6 +111,7 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         """
 
         selection = get_user_input()
-        sort_data(selection)
+        define_object(selection)
+        # sort_data(selection)
 
 main()
