@@ -1,5 +1,22 @@
 import csv
 
+
+class data_category:
+    """
+    Creates an instance of the data category class to store the name and
+    description of the selected statistics.
+    """
+    def __init__(self, name, info):
+        self.name = name
+        self.info = info
+
+        def get_name(self):
+            return(self.name)
+
+        def get_info(self):
+            return(self.info)
+
+
 with open('lifeExpect.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
