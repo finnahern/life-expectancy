@@ -1,7 +1,7 @@
 import csv
 
 
-class data_category:
+class Data_category:
     """
     Creates an instance of the data category class to store the name and
     description of the selected statistics.
@@ -10,11 +10,11 @@ class data_category:
         self.name = name
         self.info = info
 
-        def get_name(self):
-            return(self.name)
+    def get_name(self):
+        return self.name
 
-        def get_info(self):
-            return(self.info)
+    def get_info(self):
+        return self.info
 
 
 # opens the 2 .csv files and creates lists of their contents
@@ -67,9 +67,8 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         Creates an instance of the data category object and populates it from lifeExpectCategories.csv
         """
 
-        selected_category = data_category(data[0][selection + 2], data_categories[selection])
-        print("\nCATEGORY OBJECT DEFINED")
-        print(selected_category.get_name())
+        selected_category = Data_category(data[0][selection + 2], data_categories[selection][0])
+        print(f"\n{selected_category.get_name()}")
         print(selected_category.get_info())
 
     def sort_data(selection):
@@ -112,6 +111,6 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
 
         selection = get_user_input()
         define_object(selection)
-        # sort_data(selection)
+        sort_data(selection)
 
 main()
