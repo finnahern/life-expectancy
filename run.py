@@ -67,7 +67,7 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         Creates an instance of the data category object and populates it from lifeExpectCategories.csv
         """
 
-        selected_category = Data_category(data[0][selection + 2], data_categories[selection][0])
+        selected_category = Data_category(data[0][selection + 2], data_categories[selection - 1][0])
         print(f"\n{selected_category.get_name()}")
         print(selected_category.get_info())
 
