@@ -76,7 +76,6 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         Sort the .csv file into a list of country names and life expectancy
         values. Sort these by life expectancy values and display the top five.
         """
-        print(f"sort_data called, selection is: {selection}")
 
         # create data_list out of the countries column and the column of the selected data.
         data_list = []
