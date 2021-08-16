@@ -37,7 +37,6 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
                 print(f"{x + 1}. {data[0][x + 3]}")
 
             selection = input()
-            selection = int(selection)
 
             if validate_input(selection):
                 print("Data is valid!")
@@ -53,11 +52,12 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         """
 
         try:
+            selection = int(selection)
             if selection > 13 or selection < 1:
-                raise ValueError("Please enter a number between 1 and 13")
+                raise ValueError("\nPlease enter a number between 1 and 13")
 
         except ValueError:
-            print("Input must be a number between 1 and 13!\n")
+            print("\nInput must be a number between 1 and 13!")
             return False
 
         return True
@@ -110,6 +110,9 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         """
 
         selection = get_user_input()
+        # convert selection from string to int
+        selection = int(selection)
+
         define_object(selection)
         sort_data(selection)
 
