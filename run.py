@@ -39,7 +39,6 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
             selection = input()
 
             if validate_input(selection):
-                print("Data is valid!")
                 break
 
         return selection
