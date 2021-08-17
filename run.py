@@ -63,7 +63,8 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
 
     def define_object(selection):
         """
-        Creates an instance of the data category object and populates it from lifeExpectCategories.csv
+        Creates an instance of the data category object and
+        populates it from lifeExpectCategories.csv
         """
 
         selected_category = Data_category(data[0][selection + 2], data_categories[selection - 1][0])
