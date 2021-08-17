@@ -22,9 +22,13 @@ The first version of the code for this output was a separate print statement for
 
 The program features a .csv reader to parse the two .csv files and extract specific elements in order to sort them. This part of the program creates two variables, data and data_categories, which are lists containing the contents of each .csv file. Other parts of the program will reference specific indices of these lists to retrieve data from them as required.
 
-![Screenshot of the .csv reader code](assets/images/screencap3a.PNG)
+![Screenshot of the .csv reader code](assets/images/screencap3.PNG)
 
 - ### Validates user input
+
+Once the user has entered a number to select which category they wish to sort, the validate_input function is called, using the user selection as an argument.
+
+
 
 - ### Object oriented programming
 
