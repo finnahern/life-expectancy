@@ -101,6 +101,21 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
         for x in range(5):
             print(f"{(x + 1)}. {data_list_bottom[x][0]}    {data_list_bottom[x][1]}")
 
+    def restart():
+        """
+        Prompts the user to make another query of the database
+        """
+
+        restart_choice = input("\nSearch another data set? Y/N\n")
+
+        if restart_choice == "Y" or restart_choice == "y":
+            main()
+        elif restart_choice == "N" or restart_choice == "n":
+            return
+        else:
+            print("Invalid input!")
+            restart()
+
     def main():
         """
         Main function to take and pass arguments to the other
@@ -113,5 +128,6 @@ with open("lifeExpect.csv", newline="") as f1, open("lifeExpectCategories.csv", 
 
         define_object(selection)
         sort_data(selection)
+        restart()
 
 main()
