@@ -1,5 +1,0 @@
-11/8/21 - Sort function sorting some categories correctly, but not others.
-FIX: list elements in the data variable were all strings. The problem was solved once I converted them into floats before sorting
-
-14/8/21 - Object definition not working properly. "Instance of data_category" has no "get_name/info" member"
-FIX: An indentation error was causing the get_name and get_info functions to not be within the scope of the class
