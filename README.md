@@ -23,7 +23,9 @@ The first version of the code for this output was a separate print statement for
 
 - ### Reads .csv files
 
-    The program features a .csv reader to parse the two .csv files and extract specific elements in order to sort them. This part of the program creates two variables, data and data_categories, which are lists containing the contents of each .csv file. Other parts of the program will reference specific indices of these lists to retrieve data from them as required.
+    The program features a .csv reader to parse the two .csv files and extract specific elements in order to sort them. This was done by importing the csv library in order to access the reader object, which can parse the .csv documents and convert them into data accessable by other functions in Python.
+    
+    This part of the program creates two variables, data and data_categories, which are lists containing the contents of each .csv file. Other parts of the program will reference specific indices of these lists to retrieve data from them as required.
 
 ![Screenshot of the .csv reader code](assets/images/screencap3.PNG)
 
